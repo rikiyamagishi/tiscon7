@@ -55,7 +55,7 @@
       </table>
     </div>
     <div class="col-sm-12">
-      <div class="sub-title">集荷元・お届け先</div>
+      <div class="sub-title">集荷元・お届け先・引っ越し月</div>
       <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
         <col span="2" style="background-color: #FFFFFF;">
@@ -83,6 +83,11 @@
           <th>お届け先住所（市区町村以下）</th>
           <td><span th:text="*{newAddress}"></span></td>
           <input type="hidden" name="newAddress" id="newAddress" th:value="*{newAddress}"/>
+        </tr>
+        <tr>
+          <th>引っ越し月</th>
+          <td><span th:text="*{moveMonth}"></span></td>
+          <input type="hidden" name="moveMonth" id="moveMonth" th:value="*{moveMonth}"/>
         </tr>
         </tbody>
       </table>
@@ -117,11 +122,6 @@
             <th>洗濯機の設置工事申し込み</th>
             <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span></td>
             <input type="hidden" name="washingMachineInstallation" id="washingMachineInstallation" th:value="*{washingMachineInstallation}"/>
-          </tr>
-          <tr>
-            <th>引っ越し月</th>
-            <td><span th:text="*{moveMonth}"></span></td>
-            <input type="hidden" name="moveMonth" id="moveMonth" th:value="*{moveMonth}"/>
           </tr>
         </tbody>
       </table>
