@@ -83,6 +83,7 @@
                 th:errors="*{newAddress}"> userId error
           </span>
         </div>
+        ※集荷元・お届け先が同じ都道府県の場合、移動距離を100kmとして見積もりをします。
       </fieldset>
       <fieldset>
       <div class="sub-title">お荷物情報</div>
@@ -135,6 +136,8 @@
                 th:errors="*{moveMonth}"> userId error
           </span>
         </div>
+
+        <th>※繁忙期(3月,4月,9月)は通常の料金と異なります。</th>
       </fieldset>
       <div class="form-group">
         <div class="text-center">
