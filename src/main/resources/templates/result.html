@@ -20,7 +20,8 @@
     <div class="page-title">概算お見積り結果</div>
     <div class="col-sm-12">
       <div class="text-center">
-        <div class="primary-text"><span th:text="${price}"></span>円</div>
+        <div class="primary-text"><span th:text="${#numbers.formatInteger(price, 3, 'COMMA')}
+"></span>円</div>
         <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
       </div>
       <div class="sub-title">お客様情報</div>
@@ -115,10 +116,10 @@
       </table>
       <div class="form-group">
         <div class="text-center">
-          <!--
-          <button type="submit" name="backToConfirm" class="btn-back">TOPへ戻る</button>
-          -->
-          <a class="btn btn-back" href="/" role="button">TOPへ戻る</a>
+
+          <button type="submit" name="backToInput" class="btn-back">やり直す</button>
+
+          <a class="btn btn-back" href="/" role="button">やめる</a>
         </div>
       </div>
     </div>
