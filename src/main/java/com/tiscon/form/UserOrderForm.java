@@ -2,9 +2,7 @@ package com.tiscon.form;
 
 import com.tiscon.validator.Numeric;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 /**
  * 顧客が入力する見積もり情報を保持するクラス。
@@ -51,6 +49,20 @@ public class UserOrderForm {
     @Numeric
     @NotBlank
     private String washingMachine;
+
+    @Numeric
+    @NotBlank
+    @Max(12)
+    @Min(1)
+    private String moveMonth;
+
+    public String getMoveMonth() {
+        return moveMonth;
+    }
+
+    public void setMoveMonth(String moveMonth) {
+        this.moveMonth = moveMonth;
+    }
 
     @NotNull
     private boolean washingMachineInstallation;

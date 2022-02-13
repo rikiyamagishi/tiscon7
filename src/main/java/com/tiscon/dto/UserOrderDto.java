@@ -24,6 +24,16 @@ public class UserOrderDto {
 
     private String washingMachine;
 
+    private String moveMonth;
+
+    public String getMoveMonth() {
+        return moveMonth;
+    }
+
+    public void setMoveMonth(String moveMonth) {
+        this.moveMonth = moveMonth;
+    }
+
     private boolean washingMachineInstallation;
 
     public String getCustomerName() {
